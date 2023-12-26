@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.HelloController">
+   <children>
+      <Label layoutX="26.0" layoutY="141.0" prefHeight="36.0" prefWidth="97.0" text="DATE:" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="196.0" prefHeight="36.0" prefWidth="97.0" text="TIME:" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="252.0" prefHeight="36.0" prefWidth="131.0" text="DESPRIPTION:" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="308.0" prefHeight="36.0" prefWidth="110.0" text="LOCATION:" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="subjectTextField" layoutX="175.0" layoutY="88.0" prefHeight="36.0" prefWidth="202.0" style="-fx-border-radius: 5px; -fx-border-width: 2px; -fx-background-radius: 5px;">
+         <font>
+            <Font name="Arial Narrow" size="18.0" />
+         </font></TextField>
+      <Button fx:id="addButton" layoutX="477.0" layoutY="88.0" mnemonicParsing="false" onAction="#addButtonPress" prefHeight="39.0" prefWidth="131.0" text="ADD" textFill="#00f529">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Button>
+      <TextField fx:id="timeTextField" layoutX="175.0" layoutY="196.0" prefHeight="36.0" prefWidth="202.0" style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;">
+         <font>
+            <Font name="Arial Narrow" size="20.0" />
+         </font></TextField>
+      <TextField fx:id="descriptionTextField" layoutX="175.0" layoutY="252.0" prefHeight="36.0" prefWidth="202.0" style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;">
+         <font>
+            <Font name="Arial Narrow" size="20.0" />
+         </font></TextField>
+      <TextField fx:id="locationTextField" layoutX="175.0" layoutY="308.0" prefHeight="36.0" prefWidth="202.0" style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;">
+         <font>
+            <Font name="Arial Narrow" size="20.0" />
+         </font></TextField>
+      <DatePicker fx:id="myDatePicker" layoutX="175.0" layoutY="140.0" onAction="#getDate" prefHeight="36.0" prefWidth="202.0" style="-fx-background-radius: 5px; -fx-border-width: 2px; -fx-border-radius: 5px;" />
+      <TableView fx:id="table" layoutX="-2.0" layoutY="356.0" prefHeight="208.0" prefWidth="725.0">
+        <columns>
+          <TableColumn fx:id="subjectCol" onEditCommit="#onSubjectChange" prefWidth="102.0" text="Subject" />
+          <TableColumn fx:id="dateCol" onEditCommit="#onDateChanged" prefWidth="120.0" text="Date" />
+            <TableColumn fx:id="timeCol" onEditCommit="#onTimeChanged" text="Time" />
+            <TableColumn fx:id="descriptionCol" onEditCommit="#onDescriptionChanged" prefWidth="241.0" text="Description" />
+            <TableColumn fx:id="locationCol" onEditCommit="#onLocationChanged" prefWidth="171.0" text="Location" />
+        </columns>
+      </TableView>
+      <Button fx:id="removeButton" alignment="CENTER" layoutX="477.0" layoutY="139.0" mnemonicParsing="false" onAction="#onRemoveButtonPressed" prefHeight="36.0" prefWidth="131.0" text="REMOVE" textFill="#f00000">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="searchButton" layoutX="636.0" layoutY="332.0" mnemonicParsing="false" onAction="#onSearchButtonPress" prefHeight="25.0" prefWidth="27.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchTF" layoutX="485.0" layoutY="331.0" prefHeight="26.0" prefWidth="149.0" promptText="Enter Subject of Task" />
+      <Button fx:id="showAllButton" layoutX="528.0" layoutY="301.0" mnemonicParsing="false" onAction="#showAllButtonPressed" opacity="0.0" text="Show All" />
+      <Label fx:id="mainLabel" alignment="CENTER" layoutX="-2.0" layoutY="-3.0" prefHeight="53.0" prefWidth="725.0" text="TODO LIST">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></Label>
+      <Label layoutX="26.0" layoutY="88.0" prefHeight="36.0" prefWidth="97.0" text="SUBJECT:" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

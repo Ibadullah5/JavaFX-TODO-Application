@@ -1,0 +1,54 @@
+.root{
+-fx-background-image: url("todo1.jpg");
+-fx-background-size: stretch;;
+}
+
+#mainLabel{
+-fx-font-size: 45px;
+-fx-background-color:transparent;
+-fx-text-fill: navy;
+}
+.label{
+-fx-font-family: "Helvetica";
+-fx-font-weight:bold;
+-fx-font-size: 15px;
+-fx-text-fill: black;
+}
+#searchButton{
+-fx-background-image:url("search.png");
+-fx-background-size: stretch;
+}
+#searchTF{
+-fx-background-color:black;
+-fx-text-fill:white;
+}
+#addButton{
+-fx-text-fill: green;
+}
+#addButton:hover{
+-fx-text-fill: white;
+-fx-background-color: darkgreen;
+}
+#removeButton:hover{
+-fx-text-fill: white;
+-fx-background-color: red;
+}
+#addButton:pressed{
+-fx-text-fill: green;
+-fx-background-color: white;
+}
+#removeButton:pressed{
+-fx-text-fill: red;
+-fx-background-color: white;
+}
+.table-view  {
+    -fx-font-size: 15px;
+    -fx-font-style: italic;
+    -fx-background-color:transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, blue, green);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
